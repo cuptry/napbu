@@ -100,7 +100,9 @@ def calcunapbustart(now):
         locdate = item.find('locdate') # locdate 변수에 휴일의 날짜 저장
         holidays.append(locdate.get_text()) # holidays 리스트에 휴일 날짜 텍스트화 시켜서 추가 기존은 HTML
         
-        
+
+
+
 print('월(月) 총 납부기간 출력')
 standardMonthDate = input('원하는 월(月)를 연도(年)와 입력해주세요 : ')
 
