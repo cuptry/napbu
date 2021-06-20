@@ -113,8 +113,7 @@ monthFirstDay = 1
 monthLastDay = calendar.monthrange(monthdate.year, monthdate.month)[1]
 
 calcunapbustart(monthdate)
-
- 
+2
 
 facto = pd.DataFrame()
 for i in range(monthFirstDay, monthLastDay+1):
@@ -124,7 +123,7 @@ for i in range(monthFirstDay, monthLastDay+1):
     
     
 
-facto.to_excel('{0}\{1}년 {2}월 납부기간.xlsx'.format(os.path.dirname(os.path.realpath(__file__)), monthdate.year, monthdate.month), sheet_name='new_name', index=False)
+facto.to_excel('{0}\{1}년 {2}월 납부기간.xlsx'.format(os.path.join(os.path.expanduser('~'),'Desktop'), monthdate.year, monthdate.month), sheet_name='new_name', index=False)
 print('{0}년 {1}월 납부기한 엑셀 파일 출력 완료!'.format(monthdate.year,monthdate.month))
 
 
